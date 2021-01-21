@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  color: $Very-Dark-Violet;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+h1,h2 {
+  &::before {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 1px;
+    margin-bottom: 4.5rem;
+  }
+}
+
+h1 {
+  font-size: 4.6rem;
+  line-height: 4rem;
+  letter-spacing: -0.025rem;
+}
+
+h2 {
+  font-size: 4.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.016rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+  letter-spacing: -0.016rem;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 1.9rem;
+  line-height: 0.9;
+  letter-spacing: -0.016rem;
+}
+
+h5,
+.link,
+.btn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: $Very-Dark-Violet;
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: -0.01rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+  border: .1rem solid $Very-Dark-Violet;
+  color: $Very-Dark-Violet;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  padding: 0.7rem 1.7rem;
+
+  &-white {
+    border-color: $Very-Light-Gray;
+    color: $Very-Light-Gray;
+  }
+}
