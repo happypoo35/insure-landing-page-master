@@ -10,6 +10,36 @@ $content: 10rem;
 
 %wrapper {
   width: 100%;
-  max-width: 1110px;
+  max-width: 1440px;
   margin: 0 auto;
+}
+
+%transition {
+  transition: 0.3s ease;
+}
+
+$laptop-l: 1180px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 524px;
+
+@mixin laptop-l {
+  @media screen and (max-width: $laptop-l) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
 }

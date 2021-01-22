@@ -17,13 +17,19 @@ h4 {
   font-weight: 400;
 }
 
-h1,h2 {
+h1,
+h2 {
   &::before {
     content: "";
     display: block;
     width: 10rem;
     height: 1px;
     margin-bottom: 4.5rem;
+
+    @include tablet {
+      margin-bottom: 3rem;
+      width: 9rem;
+    }
   }
 }
 
@@ -31,18 +37,33 @@ h1 {
   font-size: 4.6rem;
   line-height: 4rem;
   letter-spacing: -0.025rem;
+
+  @include laptop {
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: -0.012rem;
+  }
 }
 
 h2 {
   font-size: 4.5rem;
   line-height: 2rem;
   letter-spacing: -0.016rem;
+
+  @include laptop {
+    font-size: 3rem;
+  }
 }
 
 h3 {
   font-size: 3.5rem;
   letter-spacing: -0.016rem;
   line-height: 1;
+
+  @include laptop {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 h4 {
@@ -76,15 +97,26 @@ ul {
 
 .btn {
   cursor: pointer;
-  border: .1rem solid $Very-Dark-Violet;
+  border: 0.1rem solid $Very-Dark-Violet;
   color: $Very-Dark-Violet;
   outline: none;
   background: transparent;
   font-family: inherit;
   padding: 0.7rem 1.7rem;
+  @extend %transition;
+
+  &:hover {
+    background: $Very-Dark-Violet;
+    color: $Very-Light-Gray;
+  }
 
   &-white {
     border-color: $Very-Light-Gray;
     color: $Very-Light-Gray;
+
+    &:hover {
+      background: $Very-Light-Gray;
+      color: $Very-Dark-Violet;
+    }
   }
 }
